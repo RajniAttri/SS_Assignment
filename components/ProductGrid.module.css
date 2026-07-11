@@ -1,0 +1,67 @@
+.notice {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  background: #fff6e6;
+  border: 1px solid #ffe0a3;
+  border-radius: var(--radius);
+  color: #8a5a00;
+  font-size: 0.9rem;
+}
+
+/* Mobile-first: one column by default. */
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.gridItem {
+  display: flex;
+}
+
+.gridItem > * {
+  width: 100%;
+}
+
+.empty {
+  text-align: center;
+  padding: 56px 16px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+.emptyTitle {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.emptyText {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Tablet: two columns. */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small desktop: three columns. */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large desktop: four columns. */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
