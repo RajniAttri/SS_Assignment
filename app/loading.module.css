@@ -1,0 +1,85 @@
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.headerBar {
+  height: 40px;
+  width: 200px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.searchBar {
+  height: 44px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.image {
+  height: 180px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.line {
+  height: 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.short {
+  width: 60%;
+}
+
+.headerBar,
+.searchBar,
+.image,
+.line {
+  background: linear-gradient(90deg, #ececf0 25%, #f4f4f7 37%, #ececf0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
