@@ -1,0 +1,34 @@
+.wrapper {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  max-width: 420px;
+  padding: 11px 14px;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(47, 107, 255, 0.15);
+}
+
+.count {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
