@@ -5,7 +5,7 @@ fetches products from the [Fake Store API](https://fakestoreapi.com/products),
 renders them as a responsive card grid, and lets you filter by title on the
 client.
 
-**Live demo:** _add your Vercel URL here after deploying_
+**Live demo:** [_Vercel URL_](https://ss-assignment-4rpp.vercel.app/)
 
 ## Features
 
@@ -65,8 +65,7 @@ types/
 The live API is the source of truth. `getProducts()` fetches it on the server:
 
 - While the request is in flight, `loading.tsx` shows a skeleton grid.
-- If the request fails, we serve the bundled JSON snapshot so the page still
-  renders, and a small notice tells the user they're viewing the saved copy.
+- If the live API request fails for any reason (network issues, downtime, or an HTTP error such as 403), the application automatically serves the bundled `fallback-products.json` dataset and displays a notice indicating that a saved copy is being shown.
 - `error.tsx` is the route-level safety net for any unexpected render error and
   offers a **Retry** button (which re-runs the server fetch).
 
