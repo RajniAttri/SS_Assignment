@@ -9,18 +9,13 @@ export interface ProductsResult {
   usedFallback: boolean;
 }
 
-/**
- * Fetches the product list on the server.
- *
- * The live API is the source of truth. If the request fails (network error or a
- * non-2xx response), we fall back to a local JSON snapshot so the page still
- * renders instead of throwing. `usedFallback` lets the UI tell the user when
- * they are looking at the offline copy.
- */
+//  Fetches the product list on the server.
+
 export async function getProducts(): Promise<ProductsResult> {
   try {
     const res = await fetch(PRODUCTS_URL, { cache: "no-store" });
-
+    console.log(res);
+    
     if (!res.ok) {
       throw new Error(`Request failed with status ${res.status}`);
     }
