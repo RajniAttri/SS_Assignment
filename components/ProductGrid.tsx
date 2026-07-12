@@ -25,11 +25,11 @@ export default function ProductGrid({
 
   return (
     <>
-      {usedFallback && (
+      {/* {usedFallback && (
         <p className={styles.notice} role="status">
           Couldn&apos;t reach the store — showing a saved copy of the products.
         </p>
-      )}
+      )} */}
 
       <SearchBar
         value={query}
